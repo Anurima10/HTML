@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.card-image{
+width:10%;
+
+}
+
+.mytable{
+
+    display: grid;
+}
+
+</style>
+<body>
+    
+</body>
+<script>
+    function fragmentUpdate()
+    
+    {
+        const container = document.createDocumentFragment();
+        container.className="mytable";
+        const startTime = performance.now();
+        const details=[
+    {
+        "tittle": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        "price": 100,
+        "image": "https://www.rlmedia.io/is/image/PoloGSI/s7-1411976_alternate1?$rl_df_pdp_5_7$",
+    },
+    
+    {
+        "tittle": "dress",
+        "price": 180,
+        "image": "https://image.shutterstock.com/image-vector/vector-illustration-nice-minimalist-dress-260nw-1722922060.jpg",
+    },
+    
+    {
+    
+        "tittle": "ring",
+        "price": 120,
+       "image": "https://cdn.shopify.com/s/files/1/0108/1530/7839/products/katering_3000x.jpg?v=1660571374",
+    }
+    
+        ]
+    
+        for (i=0;i<details.length;i++)
+        {
+            const tittle=details[i].tittle;
+            const price=details[i].price;
+            const cardImage = document.createElement("img");
+    cardImage.src = details[i].image;
+    cardImage.className = "card-image";
+   container .appendChild(cardImage);
+
+            const element = document.createElement("TABLE");
+      //  element.innerText = name;
+       //element.innerText = username;
+    
+       //templ tag concate
+       // element.innerHTML = `<p>${tittle}</p><p>${price}</p><p>${image}</p>`;
+       element.innerHTML = `<tr><td>${tittle}</td><td>${price}</td><td>${cardImage}</td></tr>`;
+       
+        container.appendChild(element);
+    
+        }
+    
+        document.body.appendChild(container);
+    
+      const endTime = performance.now();
+      return endTime - startTime;
+    }
+    fragmentUpdate(); 
+    </script>
+</html>

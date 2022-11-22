@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+            <ul id="list">
+                <li>orange</li>
+                <li>mango</li>
+                <li>apple</li>
+                <li>pineapple</li>
+            </ul>
+        
+    </div>
+</body>
+</html>
+
+<script>
+    const product=["potato","carrot"];
+    const scriplist=document.getElementById("list");
+    
+    for(i=0;i<product.length;i++)
+    {
+        const myarray=product[i];
+        console.log("@AY i:",myarray);
+    
+
+    const listitem = document.createElement("li");
+listitem.innerText=product[i];
+scriplist.appendChild(listitem);
+    }
+
+</script>

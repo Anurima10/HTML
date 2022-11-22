@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    <!--table>
+        <tr>
+            <th>ID</th>
+          <th>Name</th>
+          <th>username</th>
+          <th>email</th>
+          
+        </tr>
+        <tr>
+            <td>1</td>
+          <td>Leanne Graham</td>
+          <td>Bret</td>
+          <td>Sincere@april.biz</td>
+        </tr>
+        <tr>
+            <td>2</td>
+          <td>Ervin Howell</td>
+          <td>Antonette</td>
+          <td>Shanna@melissa.tv</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+          <td>Clementine Bauch</td>
+          <td>Samantha</td>
+          <td>Nathan@yesenia.net</td>
+        </tr>
+    </table-->
+
+    
+
+</body>
+
+
+<!--script>
+const list= document.getElementById("record") ;
+const fraglist = document.createDocumentFragment();
+for (i=0;i<list.length;i++)
+{
+
+const array=list[i];
+console.log("@AY i:",array);
+
+const element = document.createElement("table");
+fraglist.appendChild(element);
+
+}
+list.append(fraglist);
+
+</script-->
+
+<script>
+function fragmentUpdate()
+
+{
+    const container = document.createDocumentFragment();
+    const startTime = performance.now();
+    const details=[
+{
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+},
+
+{
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+},
+
+{
+
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+}
+
+    ]
+
+    for (i=0;i<details.length;i++)
+    {
+        const name=details[i].name;
+        const username=details[i].username;
+        const email = details[i].email;
+        const element = document.createElement("li");
+  //  element.innerText = name;
+   //element.innerText = username;
+
+   //templ tag concate
+   element.innerHTML = `<p>${name}</p><p>${username}</p><p>${email}</p>`;
+
+   
+    container.appendChild(element);
+
+    }
+
+    document.body.appendChild(container);
+
+  const endTime = performance.now();
+  return endTime - startTime;
+}
+fragmentUpdate(); 
+</script>
+</html>
