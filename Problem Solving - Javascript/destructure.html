@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+</html>
+<script>
+const profile = {
+    uname:"kitty",
+    city:"vds",
+    state:"mp",
+    details : {
+        docu:"hen",
+        ani:"cat",
+    }
+}
+
+const {city,uname,state,details} = profile;
+const{docu,ani}=profile;
+
+const {fvrt="NA"} = profile;
+console.log(uname,city,state,fvrt,details);
+
+
+</script>
+
+const profile = {
+    name:"kitty",
+    city:"vds",
+    state:"mp",
+}
+
+const {username,city,state} = profile;
+console.log(name,city,state);
+
+var { name, city, details, detail = { address: "NA" } } = profile;
+
+Name is reserve keyword
