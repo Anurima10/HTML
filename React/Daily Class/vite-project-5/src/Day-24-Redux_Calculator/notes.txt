@@ -1,0 +1,8 @@
+CALCULATOR
+
+-STEP :
+Create a folder and layout & slicefile
+In Layout file create a calculator function , usestate and input html
+Now in slice create reducer and define function.
+In store.js configure input
+In main include the component inside provider
